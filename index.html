@@ -2997,7 +2997,7 @@
     }
 
 
-    // 6. TẢI DỮ LIỆU TỪ MÂY VỀ MÁY
+        // 6. TẢI DỮ LIỆU TỪ MÂY VỀ MÁY
     async function syncDataFromCloud() {
         if (!currentUser) return;
         
@@ -3018,8 +3018,8 @@
                 if(data.thebao_catalog_v6) localStorage.setItem('thebao_catalog_v6', data.thebao_catalog_v6);
                 
                 // Tải lại trang để cập nhật giao diện
-                alert("✅ Đã đồng bộ dữ liệu xong!");
-                location.reload(); 
+                alert("✅ Đã đồng bộ dữ liệu xong!");   // <--- LỖI Ở ĐÂY
+                location.reload();                     // <--- LỖI Ở ĐÂY
             } else {
                 console.log("Tài khoản mới, chưa có dữ liệu trên Cloud.");
             }
@@ -3030,6 +3030,7 @@
         // Tắt loading
         if(typeof closeProgressModal === 'function') closeProgressModal();
     }
+
 
 
     // 7. GHI ĐÈ CÁC HÀM LƯU ĐỂ TỰ ĐỘNG ĐỒNG BỘ
@@ -3084,4 +3085,5 @@
     }
     </script>
 </body>
+
 </html>
